@@ -215,6 +215,7 @@ for_window [class="Thus"] floating enable border normal
 for_window [class="Timeset-gui"] floating enable border normal
 for_window [class="(?i)virtualbox"] floating enable border normal
 for_window [class="Xfburn"] floating enable
+for_window [class=".*"] title_format " %title"
 
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
@@ -230,7 +231,7 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 
 # Set shut down, restart and locking features
 bindsym $mod+0 mode "$mode_system"
-set $mode_system (l)ock, (e)xit, (s)uspend, (h)ibernate, (r)eboot, (Shift+h)alt, (Shift+f)ast shutdown
+set $mode_system (m)enu, (l)ock, (e)xit, (s)uspend, (h)ibernate, (r)eboot, (Shift+h)alt
 mode "$mode_system" {
     bindsym l exec --no-startup-id  xflock4, mode "default"
     bindsym s exec --no-startup-id  xfce4-session-logout --suspend, mode "default"
@@ -239,7 +240,7 @@ mode "$mode_system" {
     bindsym h exec --no-startup-id  xfce4-session-logout --hibernate, mode "default"
     bindsym r exec --no-startup-id  xfce4-session-logout --reboot, mode "default"
     bindsym Shift+h exec --no-startup-id xfce4-session-logout --halt, mode "default"
-    bindsym Shift+f exec --no-startup-id xfce4-session-logout --fast, mode "default"
+    bindsym m exec --no-startup-id xfce4-session-logout --fast, mode "default"
 
     # exit system mode: "Enter" or "Escape"
     bindsym Return mode "default"
@@ -306,7 +307,7 @@ bar {
         separator  #666666
 
 #                          border  backgr. text
-        focused_workspace  #303E9F #1A237E #FFFFFF
+        focused_workspace  #757575 #212121 #FFFFFF
         active_workspace   #333333 #222222 #FFFFFF
         inactive_workspace #333333 #222222 #888888
         urgent_workspace   #2F343A #EA1E63 #FFFFFF
@@ -319,10 +320,10 @@ bindsym $mod+m bar mode toggle
 
 # Theme colors
 # class                 border  backgr. text    indic.  child_border
-client.focused          #303E9F #1A237E #FFFFFF #5D6CC1   #1A237E
-client.focused_inactive #333333 #9E9E9E #FFFFFF #484E50   #9e9e9e
-client.unfocused        #333333 #222222 #616161 #292D2E   #222222
-client.urgent           #2F343A #EA1E63 #FFFFFF #EA1E63   #EA1E63
+client.focused          #333333 #212121 #FFFFFF #5D6CC1   #212121
+client.focused_inactive #757575 #9E9E9E #FFFFFF #484E50   #9e9e9e
+client.unfocused        #757575 #222222 #616161 #292D2E   #222222
+client.urgent           #EA1E63 #EA1E63 #FFFFFF #EA1E63   #EA1E63
 client.placeholder      #212121 #0C0C0C #FFFFFF #212121   #0C0C0C
 
 client.background       #FFFFFF
@@ -341,11 +342,11 @@ gaps outer -4
 # gaps outer all plus 5
 
 # Smart gaps (gaps used if only more than one container on the workspace)
-#smart_gaps on
+smart_gaps on
 
 # Smart borders (draw borders around container only if it is not the only container on this workspace)
 # on|no_gaps (on=always activate and no_gaps=only activate if the gap size to the edge of the screen is 0)
-#smart_borders on
+smart_borders on
 
 # Press $mod+Shift+g to enter the gap mode. Choose o or i for modifying outer/inner gaps. Press one of + / - (in-/decrement for current workspace) or 0 (remove gaps for current workspace). If you also press Shift with these keys, the change will be global for all workspaces.
 set $mode_gaps Gaps: (o) outer, (i) inner

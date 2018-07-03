@@ -1,0 +1,115 @@
+<?xml version="1.0"?>
+<opml version="1.0">
+  <head>
+    <title>Liferea Feed List Export</title>
+  </head>
+  <body>
+    <outline title="Companies and Products" text="Companies and Products" description="Companies and Products" type="folder">
+      <outline title="Stripe Blog" text="Stripe Blog" description="Stripe Blog" type="rss" xmlUrl="https://stripe.com/blog/feed.rss" htmlUrl="https://stripe.com/blog"/>
+      <outline title="Official Mastodon Blog" text="Official Mastodon Blog" description="Official Mastodon Blog" type="rss" xmlUrl="https://blog.joinmastodon.org/index.xml" htmlUrl="http://blog.joinmastodon.org/"/>
+      <outline title="Gitea Blog" text="Gitea Blog" description="Gitea Blog" type="rss" xmlUrl="https://blog.gitea.io/index.xml" htmlUrl="https://blog.gitea.io/"/>
+      <outline title="MSDN Blogs" text="MSDN Blogs" description="MSDN Blogs" type="rss" xmlUrl="https://blogs.msdn.microsoft.com/feed/" htmlUrl="https://blogs.msdn.microsoft.com"/>
+      <outline title="Fog Creek Blog" text="Fog Creek Blog" description="Fog Creek Blog" type="rss" xmlUrl="http://feeds.feedburner.com/FogCreekBlog?format=xml" htmlUrl="https://blog.fogcreek.com"/>
+      <outline title="re:Work - The Water Cooler" text="re:Work - The Water Cooler" description="re:Work - The Water Cooler" type="rss" xmlUrl="https://rework.withgoogle.com/blog/feed/" htmlUrl="https://rework.withgoogle.com/blog/"/>
+      <outline title="GitLab" text="GitLab" description="GitLab" type="atom" xmlUrl="https://about.gitlab.com/atom.xml" htmlUrl="https://about.gitlab.com/blog/"/>
+      <outline title="Cubos" text="Cubos" description="Cubos" type="rss" xmlUrl="https://cubos.io/blog/rss/" htmlUrl="https://cubos.io/blog/"/>
+      <outline title="Cockroach Labs Blog" text="Cockroach Labs Blog" description="Cockroach Labs Blog" type="rss" xmlUrl="https://www.cockroachlabs.com/blog/index.xml" htmlUrl="https://www.cockroachlabs.com/blog/index.xml"/>
+      <outline title="Open Garden - Medium" text="Open Garden - Medium" description="Open Garden - Medium" type="rss" xmlUrl="https://medium.com/feed/open-garden-official" htmlUrl="https://medium.com/open-garden-official?source=rss----86beffd5bc56---4"/>
+    </outline>
+    <outline title="BigData" text="BigData" description="BigData" type="folder">
+      <outline title="DataTau" text="DataTau" description="DataTau" type="rss" xmlUrl="http://www.datatau.com/rss" htmlUrl="http://www.datatau.com/"/>
+    </outline>
+    <outline title="Business" text="Business" description="Business" type="folder">
+      <outline title="Product Hunt &#x2014; The best new products, every day" text="Product Hunt &#x2014; The best new products, every day" description="Product Hunt &#x2014; The best new products, every day" type="atom" xmlUrl="https://www.producthunt.com/feed" htmlUrl="https://www.producthunt.com"/>
+      <outline title="Stanford Graduate School of Business" text="Stanford Graduate School of Business" description="Stanford Graduate School of Business" type="atom" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCGwuxdEeCf0TIA2RbPOj-8g" htmlUrl="https://www.youtube.com/channel/UCGwuxdEeCf0TIA2RbPOj-8g"/>
+      <outline title="Indie Hackers: Work Together to Build Profitable Online BusinessesStripe" text="Indie Hackers: Work Together to Build Profitable Online BusinessesStripe" description="Indie Hackers: Work Together to Build Profitable Online BusinessesStripe" type="rss" xmlUrl="http://fetchrss.com/rss/5b3824258a93f8c15f8b4567441150093.xml" htmlUrl="https://www.indiehackers.com/"/>
+    </outline>
+    <outline title="Languages" text="Languages" description="Languages" type="folder">
+      <outline title="Go lang" text="Go lang" description="Go lang" type="folder"/>
+      <outline title="Javascript" text="Javascript" description="Javascript" type="folder">
+        <outline title="JSConf" text="JSConf" description="JSConf" type="atom" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCzoVCacndDCfGDf41P-z0iA" htmlUrl="https://www.youtube.com/channel/UCzoVCacndDCfGDf41P-z0iA"/>
+        <outline title="BrazilJS" text="BrazilJS" description="BrazilJS" type="atom" xmlUrl="https://braziljs.org/feed/atom/" htmlUrl="https://braziljs.org"/>
+        <outline title="DB Dev Blog - Javascript, NodeJS, React, Blockchain" text="DB Dev Blog - Javascript, NodeJS, React, Blockchain" description="DB Dev Blog - Javascript, NodeJS, React, Blockchain" type="atom" xmlUrl="http://www.darrenbeck.co.uk/feed" htmlUrl="http://www.darrenbeck.co.uk/"/>
+        <outline title="Echo JS" text="Echo JS" description="Echo JS" type="rss" xmlUrl="http://www.echojs.com/rss" htmlUrl="&#10;https://www.echojs.com"/>
+      </outline>
+    </outline>
+    <outline title="Reddit" text="Reddit" description="Reddit" type="folder">
+      <outline title="Typescript" text="Typescript" description="Typescript" type="atom" xmlUrl="https://www.reddit.com/r/typescript/.rss" htmlUrl="https://www.reddit.com/r/typescript/"/>
+      <outline title="AskComputerScience" text="AskComputerScience" description="AskComputerScience" type="atom" xmlUrl="https://www.reddit.com/r/AskComputerScience/.rss" htmlUrl="https://www.reddit.com/r/AskComputerScience/"/>
+      <outline title="O Reddit para desenvolvedores e profissionais de TI" text="O Reddit para desenvolvedores e profissionais de TI" description="O Reddit para desenvolvedores e profissionais de TI" type="atom" xmlUrl="https://www.reddit.com/r/brdev/.rss" htmlUrl="https://www.reddit.com/r/brdev/"/>
+      <outline title="Computer Science: Theory and Application" text="Computer Science: Theory and Application" description="Computer Science: Theory and Application" type="atom" xmlUrl="https://www.reddit.com/r/compsci/.rss" htmlUrl="https://www.reddit.com/r/compsci/"/>
+      <outline title="Sharing Github project just got easier!" text="Sharing Github project just got easier!" description="Sharing Github project just got easier!" type="atom" xmlUrl="https://www.reddit.com/r/coolgithubprojects/.rss" htmlUrl="https://www.reddit.com/r/coolgithubprojects/"/>
+      <outline title="Computer Science Educators" text="Computer Science Educators" description="Computer Science Educators" type="atom" xmlUrl="https://www.reddit.com/r/CSEducation/.rss" htmlUrl="https://www.reddit.com/r/CSEducation/"/>
+      <outline title="For learning, refreshing, or just for fun!" text="For learning, refreshing, or just for fun!" description="For learning, refreshing, or just for fun!" type="atom" xmlUrl="https://www.reddit.com/r/dailyprogrammer/.rss" htmlUrl="https://www.reddit.com/r/dailyprogrammer/"/>
+      <outline title="JavaScript" text="JavaScript" description="JavaScript" type="atom" xmlUrl="https://www.reddit.com/r/javascript/.rss" htmlUrl="https://www.reddit.com/r/javascript/"/>
+      <outline title="Dedicated reddit to discuss Microservices" text="Dedicated reddit to discuss Microservices" description="Dedicated reddit to discuss Microservices" type="atom" xmlUrl="https://www.reddit.com/r/microservices/.rss" htmlUrl="https://www.reddit.com/r/microservices/"/>
+      <outline title="Peer to Peer" text="Peer to Peer" description="Peer to Peer" type="atom" xmlUrl="https://www.reddit.com/r/p2p/.rss" htmlUrl="https://www.reddit.com/r/p2p/"/>
+      <outline title="IPFS: interplanetary file system" text="IPFS: interplanetary file system" description="IPFS: interplanetary file system" type="atom" xmlUrl="https://www.reddit.com/r/ipfs/.rss" htmlUrl="https://www.reddit.com/r/ipfs/"/>
+      <outline title="MobX" text="MobX" description="MobX" type="atom" xmlUrl="https://www.reddit.com/r/mobx/.rss" htmlUrl="https://www.reddit.com/r/mobx/"/>
+      <outline title="Computer Science for Computer Scientists" text="Computer Science for Computer Scientists" description="Computer Science for Computer Scientists" type="atom" xmlUrl="https://www.reddit.com/r/algorithms/.rss" htmlUrl="https://www.reddit.com/r/algorithms/"/>
+      <outline title="node.js" text="node.js" description="node.js" type="atom" xmlUrl="https://www.reddit.com/r/node/.rss" htmlUrl="https://www.reddit.com/r/node/"/>
+      <outline title="The Go Programming Language" text="The Go Programming Language" description="The Go Programming Language" type="atom" xmlUrl="https://www.reddit.com/r/golang/.rss" htmlUrl="https://www.reddit.com/r/golang/"/>
+      <outline title="Unlock the power of blockchain!" text="Unlock the power of blockchain!" description="Unlock the power of blockchain!" type="atom" xmlUrl="https://www.reddit.com/r/BlockChain/.rss" htmlUrl="https://www.reddit.com/r/BlockChain/"/>
+    </outline>
+    <outline title="leip4Ier" text="leip4Ier" description="leip4Ier" type="folder">
+      <outline title="Neon Dystopia" text="Neon Dystopia" description="Neon Dystopia" type="rss" xmlUrl="http://www.neondystopia.com/feed/" htmlUrl="https://www.neondystopia.com"/>
+      <outline title="ZeptoBars - RSS feed" text="ZeptoBars - RSS feed" description="ZeptoBars - RSS feed" type="rss" xmlUrl="http://zeptobars.com/en/rss" htmlUrl="http://zeptobars.com/en/"/>
+      <outline title="Drew DeVault's Blog" text="Drew DeVault's Blog" description="Drew DeVault's Blog" type="rss" xmlUrl="http://drewdevault.com/feed.xml" htmlUrl="https://drewdevault.com"/>
+    </outline>
+    <outline title="Overall Programming" text="Overall Programming" description="Overall Programming" type="folder">
+      <outline title="High Scalability" text="High Scalability" description="High Scalability" type="rss" xmlUrl="http://feeds.feedburner.com/HighScalability?format=xml" htmlUrl="http://highscalability.com/blog/"/>
+      <outline title="IOD: [tech.content]" text="IOD: [tech.content]" description="IOD: [tech.content]" type="rss" xmlUrl="http://www.iamondemand.com/feed/" htmlUrl="http://www.iamondemand.com"/>
+      <outline title="Jimmy Breck-McKye" text="Jimmy Breck-McKye" description="Jimmy Breck-McKye" type="atom" xmlUrl="https://www.breck-mckye.com/atom.xml" htmlUrl="http://www.breck-mckye.com/"/>
+      <outline title="Ristret" text="Ristret" description="Ristret" type="rss" xmlUrl="https://ristret.com/rss" htmlUrl="https://ristret.com/"/>
+      <outline title="Joel on Software" text="Joel on Software" description="Joel on Software" type="rss" xmlUrl="https://www.joelonsoftware.com/feed/" htmlUrl="https://www.joelonsoftware.com"/>
+      <outline title="Awesome Talks" text="Awesome Talks" description="Awesome Talks" type="rss" xmlUrl="https://awesometalks.party/feed" htmlUrl="https://awesometalks.party"/>
+      <outline title="herdingcats" text="herdingcats" description="herdingcats" type="atom" xmlUrl="http://herdingcats.typepad.com/my_weblog/atom.xml" htmlUrl="http://herdingcats.typepad.com/my_weblog/"/>
+      <outline title="mountaingoatsoftware" text="mountaingoatsoftware" description="mountaingoatsoftware" type="rss" xmlUrl="http://www.mountaingoatsoftware.com/blog/rss" htmlUrl="http://www.mountaingoatsoftware.com/blog/"/>
+      <outline title="secretgeek" text="secretgeek" description="secretgeek" type="rss" xmlUrl="http://secretgeek.net/Rss" htmlUrl="http://secretGeek.net/index.asp"/>
+      <outline title="swizec" text="swizec" description="swizec" type="rss" xmlUrl="https://swizec.com/blog/feed" htmlUrl="https://swizec.com/blog"/>
+      <outline title="fedecarg" text="fedecarg" description="fedecarg" type="rss" xmlUrl="https://blog.fedecarg.com/feed/" htmlUrl="https://blog.fedecarg.com"/>
+      <outline title="codinghorror" text="codinghorror" description="codinghorror" type="rss" xmlUrl="http://feeds.feedburner.com/codinghorror" htmlUrl="https://blog.codinghorror.com/"/>
+      <outline title="scottberkun" text="scottberkun" description="scottberkun" type="rss" xmlUrl="http://scottberkun.com/feed/" htmlUrl="http://scottberkun.com"/>
+      <outline title="joelonsoftware" text="joelonsoftware" description="joelonsoftware" type="rss" xmlUrl="https://www.joelonsoftware.com/feed/" htmlUrl="https://www.joelonsoftware.com"/>
+      <outline title="codesimplicity" text="codesimplicity" description="codesimplicity" type="atom" xmlUrl="http://www.codesimplicity.com/feed/atom/" htmlUrl="https://www.codesimplicity.com"/>
+    </outline>
+    <outline title="LifeArea" text="LifeArea" description="LifeArea" type="folder">
+      <outline title="Liferea Blog" text="Liferea Blog" description="Liferea Blog" type="rss" xmlUrl="http://feeds.feedburner.com/LifereaBlog" htmlUrl="http://lzone.de/liferea/blog/"/>
+    </outline>
+    <outline title="Maker" text="Maker" description="Maker" type="folder">
+      <outline title="N O D E" text="N O D E" description="N O D E" type="rss" xmlUrl="http://n-o-d-e.net/rss/rss.xml" htmlUrl="https://N-O-D-E.net"/>
+      <outline title="Blog &#x2013; Hackaday" text="Blog &#x2013; Hackaday" description="Blog &#x2013; Hackaday" type="rss" xmlUrl="https://hackaday.com/blog/feed/" htmlUrl="https://hackaday.com"/>
+    </outline>
+    <outline title="Linux" text="Linux" description="Linux" type="folder">
+      <outline title="News &#x2013; Xubuntu" text="News &#x2013; Xubuntu" description="News &#x2013; Xubuntu" type="rss" xmlUrl="https://xubuntu.org/news/category/news/feed" htmlUrl="https://xubuntu.org"/>
+    </outline>
+    <outline title="Blockchain" text="Blockchain" description="Blockchain" type="folder">
+      <outline title="BadgeChain" text="BadgeChain" description="BadgeChain" type="rss" xmlUrl="http://badgechain.com/feed" htmlUrl="http://badgechain.com"/>
+    </outline>
+    <outline title="News" text="News" description="News" type="folder">
+      <outline title="Hacker News" text="Hacker News" description="Hacker News" type="rss" xmlUrl="https://news.ycombinator.com/rss" htmlUrl="https://news.ycombinator.com/"/>
+      <outline title="Lobsters" text="Lobsters" description="Lobsters" type="rss" xmlUrl="https://lobste.rs/rss" htmlUrl="https://lobste.rs/"/>
+      <outline title="Techmeme" text="Techmeme" description="Techmeme" type="rss" xmlUrl="https://www.techmeme.com/feed.xml" htmlUrl="http://www.techmeme.com/"/>
+    </outline>
+    <outline title="Fun" text="Fun" description="Fun" type="folder">
+      <outline title="xkcd" text="xkcd" description="xkcd" type="atom" xmlUrl="http://xkcd.com/atom.xml" htmlUrl="https://xkcd.com/"/>
+    </outline>
+    <outline title="Web" text="Web" description="Web" type="folder">
+      <outline title="brainsparks" text="brainsparks" description="brainsparks" type="rss" xmlUrl="http://uie.com/brainsparks/feed" htmlUrl="https://www.uie.com/brainsparks"/>
+      <outline title="davidwalsh" text="davidwalsh" description="davidwalsh" type="rss" xmlUrl="https://davidwalsh.name/feed" htmlUrl="https://davidwalsh.name"/>
+    </outline>
+    <outline title="Pure Pratical" text="Pure Pratical" description="Pure Pratical" type="folder">
+      <outline title="Gravitational Blog on Gravitational - Multi-Region Automation Company" text="Gravitational Blog on Gravitational - Multi-Region Automation Company" description="Gravitational Blog on Gravitational - Multi-Region Automation Company" type="rss" xmlUrl="https://gravitational.com/blog/index.xml" htmlUrl="https://gravitational.com/blog/"/>
+    </outline>
+    <outline title="Avanced Stuff" text="Avanced Stuff" description="Avanced Stuff" type="folder">
+      <outline title="FSF News" text="FSF News" description="FSF News" type="rss" xmlUrl="https://www.fsf.org/static/fsforg/rss/news.xml" htmlUrl="http://www.fsf.org/news/aggregator"/>
+      <outline title="FSF blogs" text="FSF blogs" description="FSF blogs" type="rss" xmlUrl="https://www.fsf.org/static/fsforg/rss/blogs.xml" htmlUrl="http://www.fsf.org/blogs/recent-blog-posts"/>
+      <outline title="The Linux Foundation" text="The Linux Foundation" description="The Linux Foundation" type="rss" xmlUrl="https://www.linuxfoundation.org/feed/" htmlUrl="https://www.linuxfoundation.org"/>
+      <outline title="The Mozilla Blog" text="The Mozilla Blog" description="The Mozilla Blog" type="rss" xmlUrl="https://blog.mozilla.org/feed/" htmlUrl="https://blog.mozilla.org"/>
+      <outline title="EFF Action Center" text="EFF Action Center" description="EFF Action Center" type="atom" xmlUrl="https://act.eff.org/action.atom" htmlUrl="https://act.eff.org"/>
+      <outline title="Deeplinks" text="Deeplinks" description="Deeplinks" type="rss" xmlUrl="https://www.eff.org/rss/updates.xml" htmlUrl="https://www.eff.org/rss/updates.xml"/>
+      <outline title="IEEE Brasil" text="IEEE Brasil" description="IEEE Brasil" type="rss" xmlUrl="http://www.ieee.org.br/feed/" htmlUrl="http://www.ieee.org.br"/>
+      <outline title="W3C Blog" text="W3C Blog" description="W3C Blog" type="rss" xmlUrl="https://www.w3.org/blog/feed/" htmlUrl="https://www.w3.org/blog"/>
+    </outline>
+  </body>
+</opml>

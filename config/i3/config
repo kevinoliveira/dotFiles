@@ -96,8 +96,11 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # Workspace back and forth (with/without active container)
-workspace_auto_back_and_forth yes
+workspace_auto_back_and_forth no
+# workspace_auto_back_and_forth yes
+
 bindsym $mod+b workspace back_and_forth
+# bindsym $mod+Tab workspace back_and_forth
 bindsym $mod+Shift+b move container to workspace back_and_forth; workspace back_and_forth
 
 # Split orientation
@@ -135,6 +138,16 @@ bindsym $mod+minus scratchpad show
 # Navigate workspaces next / previous
 bindsym $mod+Ctrl+Right workspace next
 bindsym $mod+Ctrl+Left workspace prev
+
+bindsym $mod+Tab workspace next
+bindsym $mod+Shift+Tab workspace prev
+bindsym $mod+apostrophe workspace back_and_forth
+bindsym $mod+grave workspace back_and_forth
+
+
+
+
+
 
 bindsym --whole-window $mod+button4 workspace next
 bindsym --whole-window $mod+button5 workspace prev
@@ -215,6 +228,13 @@ for_window [class="Thus"] floating enable border normal
 for_window [class="Timeset-gui"] floating enable border normal
 for_window [class="(?i)virtualbox"] floating enable border normal
 for_window [class="Xfburn"] floating enable
+for_window [class="Chrome"] move container to workspace $ws1
+for_window [class="Code"] move container to workspace $ws2
+for_window [instance="crx"] move container to workspace $ws3
+
+
+for_window [class=".*"] title_format " %title"
+
 
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
@@ -228,18 +248,22 @@ bindsym $mod+Shift+r restart
 # Exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
+
+
 # Set shut down, restart and locking features
 bindsym $mod+0 mode "$mode_system"
-set $mode_system (l)ock, (e)xit, (s)uspend, (h)ibernate, (r)eboot, (Shift+h)alt, (Shift+f)ast shutdown
+set $mode_system (m)enu, (l)ock, (Shift+l)ock view, (e)xit, (s)uspend, (h)ibernate, (r)eboot, (Shift+h)alt
 mode "$mode_system" {
-    bindsym l exec --no-startup-id  xflock4, mode "default"
+#     bindsym l exec --no-startup-id  xflock4, mode "default"
+    bindsym l exec --no-startup-id lock -p, mode "default"
+    bindsym Shift+l exec --no-startup-id xtrlock, mode "default"    
     bindsym s exec --no-startup-id  xfce4-session-logout --suspend, mode "default"
   #  bindsym u exec --no-startup-id i3exit switch_user, mode "default"
     bindsym e exec --no-startup-id  xfce4-session-logout --logout, mode "default"
     bindsym h exec --no-startup-id  xfce4-session-logout --hibernate, mode "default"
     bindsym r exec --no-startup-id  xfce4-session-logout --reboot, mode "default"
     bindsym Shift+h exec --no-startup-id xfce4-session-logout --halt, mode "default"
-    bindsym Shift+f exec --no-startup-id xfce4-session-logout --fast, mode "default"
+    bindsym m exec --no-startup-id xfce4-session-logout --fast, mode "default"
 
     # exit system mode: "Enter" or "Escape"
     bindsym Return mode "default"
@@ -290,7 +314,11 @@ exec_always feh --bg-scale ~/.i3/wallpapers/ghost.jpg
 # Start i3bar to display a workspace bar (plus the system information i3status if available)
 bar {
   status_command i3status
-  position bottom
+#   position bottom
+  position top
+  mode invisible
+#   position top
+#   hidden_state hide
 
 ## Please set your primary output first. Example: 'xrandr --output eDP1 --primary'
 
@@ -301,14 +329,14 @@ bar {
 
   colors {
 #       background $transparent
-        background #212121
+        background #000000
         statusline #FFFFFF
-        separator  #666666
+        separator  #FFFFFF
 
 #                          border  backgr. text
-        focused_workspace  #303E9F #1A237E #FFFFFF
-        active_workspace   #333333 #222222 #FFFFFF
-        inactive_workspace #333333 #222222 #888888
+        focused_workspace  #757575 #000000 #FFFFFF
+        active_workspace   #333333 #000000 #FFFFFF
+        inactive_workspace #333333 #000000 #888888
         urgent_workspace   #2F343A #EA1E63 #FFFFFF
         binding_mode       #2F343A #EA1E63 #FFFFFF
     }
@@ -316,13 +344,15 @@ bar {
 
 # hide/unhide i3status bar
 bindsym $mod+m bar mode toggle
+bindsym $mod+i bar mode invisible
+
 
 # Theme colors
 # class                 border  backgr. text    indic.  child_border
-client.focused          #303E9F #1A237E #FFFFFF #5D6CC1   #1A237E
-client.focused_inactive #333333 #9E9E9E #FFFFFF #484E50   #9e9e9e
-client.unfocused        #333333 #222222 #616161 #292D2E   #222222
-client.urgent           #2F343A #EA1E63 #FFFFFF #EA1E63   #EA1E63
+client.focused          #333333 #212121 #FFFFFF #5D6CC1   #212121
+client.focused_inactive #757575 #9E9E9E #FFFFFF #484E50   #9e9e9e
+client.unfocused        #757575 #222222 #616161 #292D2E   #222222
+client.urgent           #EA1E63 #EA1E63 #FFFFFF #EA1E63   #EA1E63
 client.placeholder      #212121 #0C0C0C #FFFFFF #212121   #0C0C0C
 
 client.background       #FFFFFF
@@ -333,7 +363,7 @@ client.background       #FFFFFF
 
 # Set inner/outer gaps
 gaps inner 10
-gaps outer -4
+# gaps outer 
 
 # Additionally, you can issue commands with the following syntax. This is useful to bind keys to changing the gap size.
 # gaps inner|outer current|all set|plus|minus <px>
@@ -341,11 +371,11 @@ gaps outer -4
 # gaps outer all plus 5
 
 # Smart gaps (gaps used if only more than one container on the workspace)
-#smart_gaps on
+# smart_gaps on
 
 # Smart borders (draw borders around container only if it is not the only container on this workspace)
 # on|no_gaps (on=always activate and no_gaps=only activate if the gap size to the edge of the screen is 0)
-#smart_borders on
+# smart_borders on
 
 # Press $mod+Shift+g to enter the gap mode. Choose o or i for modifying outer/inner gaps. Press one of + / - (in-/decrement for current workspace) or 0 (remove gaps for current workspace). If you also press Shift with these keys, the change will be global for all workspaces.
 set $mode_gaps Gaps: (o) outer, (i) inner
@@ -384,3 +414,9 @@ mode "$mode_gaps_outer" {
         bindsym Escape mode "default"
 }
 
+
+
+
+#redshift
+bindsym $mod+Prior exec redshift
+bindsym $mod+Next exec kill `pidof redshift`

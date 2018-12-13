@@ -8,7 +8,8 @@ set $mod Mod4
 # workspace_layout tabbed <stacking|tabbed>
 
 # Configure border style <normal|1pixel|pixel xx|none|pixel>
-new_window pixel 1
+# new_window pixel 1
+new_window normal
 new_float normal
 
 # Hide borders
@@ -33,7 +34,8 @@ bindsym $mod+Return exec xfce4-terminal
 bindsym $mod+Shift+q kill
 
 # Start program launcher
-bindsym $mod+d exec --no-startup-id xfce4-popup-whiskermenu
+#bindsym $mod+d exec --no-startup-id xfce4-popup-whiskermenu
+bindsym $mod+d exec --no-startup-id xfce4-appfinder
 
 # Launch categorized menu
 #bindsym $mod+z exec --no-startup-id morc_menu
@@ -227,6 +229,7 @@ for_window [class="Skype"] floating enable border normal
 for_window [class="Thus"] floating enable border normal
 for_window [class="Timeset-gui"] floating enable border normal
 for_window [class="(?i)virtualbox"] floating enable border normal
+for_window [title="Application Finder"] floating enable
 for_window [class="Xfburn"] floating enable
 for_window [class="Chrome"] move container to workspace $ws1
 for_window [class="Code"] move container to workspace $ws2
@@ -295,7 +298,7 @@ mode "resize" {
 }
 
 # Lock screen
-bindsym $mod+Delete exec --no-startup-id 
+bindsym $mod+Delete exec --no-startup-id  xfce4-session-logout --suspend
 
 # Autostart applications
 exec --no-startup-id /usr/lib/polkit-gnome/polLockkit-gnome-authentication-agent-1
@@ -309,14 +312,14 @@ exec --no-startup-id xautolock -time 10 -locker xflock4
 exec_always --no-startup-id fix_xcursor
 
 # Set wallpaper
-exec_always feh --bg-scale ~/.i3/wallpapers/ghost.jpg
+#exec_always feh --bg-scale ~/.i3/wallpapers/ghost.jpg
 
 # Start i3bar to display a workspace bar (plus the system information i3status if available)
 bar {
   status_command i3status
-#   position bottom
-  position top
-  mode invisible
+   position bottom
+#  position top
+#  mode invisible
 #   position top
 #   hidden_state hide
 
@@ -328,17 +331,15 @@ bar {
   strip_workspace_numbers yes
 
   colors {
-#       background $transparent
-        background #000000
-        statusline #FFFFFF
-        separator  #FFFFFF
-
-#                          border  backgr. text
-        focused_workspace  #757575 #000000 #FFFFFF
-        active_workspace   #333333 #000000 #FFFFFF
-        inactive_workspace #333333 #000000 #888888
-        urgent_workspace   #2F343A #EA1E63 #FFFFFF
-        binding_mode       #2F343A #EA1E63 #FFFFFF
+      background #000000
+      statusline #DDDDDD
+      separator  #000000
+  
+      focused_workspace  #000000 #60CDC9 #000000
+      active_workspace   #DFDA49 #222222 #DFDA49
+      inactive_workspace #888888 #000000 #888888
+      urgent_workspace   #FF7373 #000000 #FF7373
+      binding_mode       #60CDC9 #000000 #60CDC9
     }
 }
 
@@ -348,14 +349,14 @@ bindsym $mod+i bar mode invisible
 
 
 # Theme colors
-# class                 border  backgr. text    indic.  child_border
-client.focused          #333333 #212121 #FFFFFF #5D6CC1   #212121
-client.focused_inactive #757575 #9E9E9E #FFFFFF #484E50   #9e9e9e
-client.unfocused        #757575 #222222 #616161 #292D2E   #222222
-client.urgent           #EA1E63 #EA1E63 #FFFFFF #EA1E63   #EA1E63
-client.placeholder      #212121 #0C0C0C #FFFFFF #212121   #0C0C0C
-
+# class                 border  bground text    indicator child_border
+client.focused          #60CDC9 #60CDC9 #000000 #60CDC9   #60CDC9
+client.focused_inactive #5F676A #5F676A #FFFFFF #5F676A   #5F676A
+client.unfocused        #AAAAAA #AAAAAA #000000 #AAAAAA   #AAAAAA
+client.urgent           #FF7373 #FF7373 #000000 #FF7373   #FF7373
+client.placeholder      #000000 #0C0C0C #FFFFFF #000000   #0C0C0C
 client.background       #FFFFFF
+
 
 #############################
 ### settings for i3-gaps: ###
@@ -371,7 +372,7 @@ gaps inner 10
 # gaps outer all plus 5
 
 # Smart gaps (gaps used if only more than one container on the workspace)
-# smart_gaps on
+ smart_gaps on
 
 # Smart borders (draw borders around container only if it is not the only container on this workspace)
 # on|no_gaps (on=always activate and no_gaps=only activate if the gap size to the edge of the screen is 0)

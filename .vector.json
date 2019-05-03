@@ -1,0 +1,14 @@
+{
+  "i3":[
+    {
+      "name": "i3 configuration file",
+      "origin": "/home/year2k38/.config/i3/config",
+      "destination": "i3wm/config"
+    },
+    {
+      "name": "i3status configuration file",
+      "origin": "/home/year2k38/.config/i3/i3status.conf",
+      "destination": "i3wm/i3status.conf"
+    }
+  ]
+}

@@ -22,7 +22,11 @@ bindsym $mod+n border normal
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font xft:Noto Sans 10
+#font xft:Noto Sans 10
+font pango: Ubuntu Bold 10
+
+
+#status_command i3status -c ~/.config/i3/i3status.conf
 
 # Use Mouse+$mod to drag floating windows
 floating_modifier $mod
@@ -35,7 +39,8 @@ bindsym $mod+Shift+q kill
 
 # Start program launcher
 #bindsym $mod+d exec --no-startup-id xfce4-popup-whiskermenu
-bindsym $mod+d exec --no-startup-id xfce4-appfinder
+#bindsym $mod+d exec --no-startup-id xfce4-appfinder
+bindsym $mod+d exec --no-startup-id rofi -show drun -font "Ubuntu Bold 10.5" -columns 3 
 
 # Launch categorized menu
 #bindsym $mod+z exec --no-startup-id morc_menu
@@ -143,6 +148,10 @@ bindsym $mod+Ctrl+Left workspace prev
 
 bindsym $mod+Tab workspace next
 bindsym $mod+Shift+Tab workspace prev
+
+bindsym XF86Forward workspace next
+bindsym XF86Back workspace prev
+
 bindsym $mod+apostrophe workspace back_and_forth
 bindsym $mod+grave workspace back_and_forth
 
@@ -158,14 +167,14 @@ bindsym --whole-window $mod+button5 workspace prev
 # to display names or symbols instead of plain workspace numbers you can use
 # something like: set $ws1 1:mail
 #                 set $ws2 2:
-set $ws1 1
-set $ws2 2
-set $ws3 3
-set $ws4 4
-set $ws5 5
-set $ws6 6
-set $ws7 7
-set $ws8 8
+set $ws1 "1:1 "
+set $ws2 "2:2 "
+set $ws3 "3:3 "
+set $ws4 "4:4 "
+set $ws5 "5:5 "
+set $ws6 "6:6 "
+set $ws7 "7:7 "
+set $ws8 "8:8 "
 
 # Switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -298,11 +307,17 @@ mode "resize" {
 }
 
 # Lock screen
-bindsym $mod+Delete exec --no-startup-id  xfce4-session-logout --suspend
+bindsym $mod+Delete exit 
+
+bindsym $mod+Shift+Delete exec --no-startup-id shutdown -h now
+
+
+
+
 
 # Autostart applications
 exec --no-startup-id /usr/lib/polkit-gnome/polLockkit-gnome-authentication-agent-1
-exec --no-startup-id nitrogen --restore; sleep 1; compton -b
+exec --no-startup-id nitrogen --restore;
 #exec --no-startup-id nm-applet
 #exec --no-startup-id xfce4-power-manager
 #exec --no-startup-id pamac-tray
@@ -316,30 +331,29 @@ exec_always --no-startup-id fix_xcursor
 
 # Start i3bar to display a workspace bar (plus the system information i3status if available)
 bar {
-  status_command i3status
-   position bottom
-#  position top
-#  mode invisible
-#   position top
-#   hidden_state hide
+  status_command i3status -c  ~/.config/i3/i3status.conf
 
-## Please set your primary output first. Example: 'xrandr --output eDP1 --primary'
+  position bottom
+  #mode invisible
+  hidden_state hide
+
+# Please set your primary output first. Example: 'xrandr --output eDP1 --primary'
 
   bindsym button4 nop
   bindsym button5 nop
-  font xft:Noto Sans 10.5
+  font xft:Ubuntu Bold 10.5 
   strip_workspace_numbers yes
 
   colors {
-      background #000000
-      statusline #DDDDDD
-      separator  #000000
-  
-      focused_workspace  #000000 #60CDC9 #000000
-      active_workspace   #DFDA49 #222222 #DFDA49
-      inactive_workspace #888888 #000000 #888888
-      urgent_workspace   #FF7373 #000000 #FF7373
-      binding_mode       #60CDC9 #000000 #60CDC9
+      background #000530
+      statusline #22e39c
+      separator  #666666
+      #                  border  bground text
+      focused_workspace  #b6e737 #000530 #b6e737
+      active_workspace   #b6e737 #000530 #b6e737
+      inactive_workspace #000530 #000530 #22e39c
+      urgent_workspace   #2F343A #900000 #FFFFFF
+      binding_mode       #2F343A #900000 #FFFFFF
     }
 }
 
@@ -350,12 +364,13 @@ bindsym $mod+i bar mode invisible
 
 # Theme colors
 # class                 border  bground text    indicator child_border
-client.focused          #60CDC9 #60CDC9 #000000 #60CDC9   #60CDC9
-client.focused_inactive #5F676A #5F676A #FFFFFF #5F676A   #5F676A
-client.unfocused        #AAAAAA #AAAAAA #000000 #AAAAAA   #AAAAAA
-client.urgent           #FF7373 #FF7373 #000000 #FF7373   #FF7373
+client.focused          #000530 #000530 #b6e737 #b6e737   #000530
+client.focused_inactive #193d6a #193d6a #22e39c #484E50   #193d6a
+client.unfocused        #193d6a #193d6a #22e39c #292D2E   #193d6a
+client.urgent           #2F343A #900000 #FFFFFF #900000   #900000
 client.placeholder      #000000 #0C0C0C #FFFFFF #000000   #0C0C0C
 client.background       #FFFFFF
+
 
 
 #############################
@@ -363,7 +378,7 @@ client.background       #FFFFFF
 #############################
 
 # Set inner/outer gaps
-gaps inner 10
+# gaps inner 10
 # gaps outer 
 
 # Additionally, you can issue commands with the following syntax. This is useful to bind keys to changing the gap size.
@@ -372,7 +387,7 @@ gaps inner 10
 # gaps outer all plus 5
 
 # Smart gaps (gaps used if only more than one container on the workspace)
- smart_gaps on
+# smart_gaps on
 
 # Smart borders (draw borders around container only if it is not the only container on this workspace)
 # on|no_gaps (on=always activate and no_gaps=only activate if the gap size to the edge of the screen is 0)
@@ -421,3 +436,22 @@ mode "$mode_gaps_outer" {
 #redshift
 bindsym $mod+Prior exec redshift
 bindsym $mod+Next exec kill `pidof redshift`
+
+
+#zoom
+bindsym $mod+Menu exec kmag
+
+
+
+#exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+
+
+
+bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -D pulse sset Master 5%+
+bindsym XF86AudioLowerVolume exec --no-startup-id amixer -D pulse sset Master 5%-
+bindsym XF86AudioMute exec --no-startup-id amixer -D pulse sset Master toggle
+
+bindsym XF86Launch1 exec  notify-send "Self Destruction protocol initiated"
+
+
+#exec_always compton 

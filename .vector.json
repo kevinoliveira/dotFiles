@@ -22,5 +22,22 @@
       "origin": "/home/year2k38/.config/rofi/glue_pro_orange.rasi",
       "destination": "rofi/glue_pro_orange.rasi"
     }
+  ],
+  "lauchers": [
+    {
+      "name": "Create new launcher launcher",
+      "origin": "/usr/share/applications/panel-desktop-handler.desktop",
+      "destination": "lauchers/createNew.desktop"
+    },
+    {
+      "name": "Shutdown launcher",
+      "origin": "/home/year2k38/.local/share/applications/shutdown.desktop",
+      "destination": "lauchers/shutdown.desktop"
+    },
+    {
+      "name": "Wifi Menu launcher",
+      "origin": "/home/year2k38/.local/share/applications/wifimenu.desktop",
+      "destination": "lauchers/wifiMenu.desktop"
+    }
   ]
 }

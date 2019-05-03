@@ -7,6 +7,10 @@ configuration files for:
 - rofi
     - custom theme
     - config
+- desktop launchers
+    - wifi menu
+    - shutdown 
+    - launcher creator
 - more to come
 
 
@@ -14,10 +18,15 @@ configuration files for:
 > tree -I *.md                     
 .
 ├── i3wm
-│   ├── config
-│   └── i3status.conf
+│   ├── config
+│   └── i3status.conf
+├── lauchers
+│   ├── createNew.desktop
+│   ├── shutdown.desktop
+│   └── wifiMenu.desktop
 └── rofi
     ├── config
     └── glue_pro_orange.rasi
 
+3 directories, 7 files
 ```

@@ -1,4 +1,4 @@
-# DotFiles
+![Image of Yaktocat](https://dotfiles.github.io/images/dotfiles-logo.png)
 
 configuration files for:
 - i3wm

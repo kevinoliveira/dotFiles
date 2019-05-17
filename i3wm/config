@@ -453,5 +453,7 @@ bindsym XF86AudioMute exec --no-startup-id amixer -D pulse sset Master toggle
 
 bindsym XF86Launch1 exec  notify-send "Self Destruction protocol initiated"
 
+exec_always redshift
+
 
 #exec_always compton 

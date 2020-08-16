@@ -1,0 +1,4 @@
+bindsym $mod+u border none
+bindsym $mod+y border pixel 20
+bindsym $mod+n border normal
+the current user is $USER hahaha

@@ -1,5 +1,18 @@
 ![Image of Yaktocat](https://dotfiles.github.io/images/dotfiles-logo.png)
 
+
+todo:
+- [ ] suport string replacement 
+- [ ] suport file concat
+- [ ] suport file auto copy
+
+
+
+
+
+
+
+
 configuration files for:
 - i3wm
     - i3

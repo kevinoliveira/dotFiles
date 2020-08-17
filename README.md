@@ -2,8 +2,8 @@
 
 
 todo:
-- [ ] suport string replacement 
-- [ ] suport file concat
+- [x] suport string replacement 
+- [x] suport file concat
 - [ ] suport file auto copy
 
 

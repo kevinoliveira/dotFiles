@@ -1,4 +1,5 @@
+thinkpad hahah
 bindsym $mod+u border none
-the current user is $USER hahaha
+the current user is §USER hahaha
 bindsym $mod+y border pixel 1
 bindsym $mod+n border normal

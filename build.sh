@@ -18,7 +18,7 @@ do
     printf "OK\n"
 
     ## ADDING FLAVORS
-    flavor_file=$(echo `dirname $config_file_path`/"$1"@`basename  $config_file_path`)
+    flavor_file=$(echo `dirname $config_file_path`/"$1"@`basename $config_file_path`)
     if test -f "$flavor_file"; then
         printf "addind flavor file $bold$1$normal to $bold.build/$config_file_path$normal... "
         cat "$flavor_file" >> ".build/$config_file_path"
@@ -35,7 +35,7 @@ do
 
     ## MOVING FILE TO DESTINATION
     printf "coping from $bold$config_file_path$normal to $bold${dests[$config_file_path]}$normal... "
-    mkdir -p `dirname "${dests[$config_file_path]}" | sed "s/\/home\/$USER/~/" `
+    # mkdir -p `dirname ${dests[$config_file_path]} | sed "s,$HOME,~,"`
     cp ".build/$config_file_path" ${dests[$config_file_path]}
     printf "OK\n"
 

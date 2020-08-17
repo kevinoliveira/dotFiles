@@ -35,8 +35,8 @@ do
 
     ## MOVING FILE TO DESTINATION
     printf "coping from $bold$config_file_path$normal to $bold${dests[$config_file_path]}$normal... "
-    mkdir -p `dirname "${dests[$config_file_path]}"`
-    cp -nf ".build/$config_file_path" "${dests[$config_file_path]}"
+    mkdir -p `dirname "${dests[$config_file_path]}" | sed "s/\/home\/$USER/~/" `
+    cp ".build/$config_file_path" ${dests[$config_file_path]}
     printf "OK\n"
 
     printf "\n"

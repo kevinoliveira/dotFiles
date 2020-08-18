@@ -1,14 +1,5 @@
-# i3 config file (v4)
-# Please see http://i3wm.org/docs/userguide.html for a complete reference!
-
-# Set mod key (Mod1=<Alt>, Mod4=<Super>)
 set $mod Mod4
 
-# Set default desktop layout (default is tiling)
-# workspace_layout tabbed <stacking|tabbed>
-
-# Configure border style <normal|1pixel|pixel xx|none|pixel>
-# new_window normal
 new_window pixel 1
 new_float normal
 
@@ -16,19 +7,11 @@ new_float normal
 hide_edge_borders none
 
 # Change borders
-
-
 bindsym $mod+u border none
 bindsym $mod+y border pixel 1
 bindsym $mod+n border normal
 
-# Font for window titles. Will also be used by the bar unless a different font
-# is used in the bar {} block below.
-#font xft:Noto Sans 10
 font pango: Ubuntu Bold 10
-
-
-#status_command i3status -c ~/.config/i3/i3status.conf
 
 # Use Mouse+$mod to drag floating windows
 floating_modifier $mod
@@ -40,46 +23,8 @@ bindsym $mod+Return exec xfce4-terminal
 bindsym $mod+Shift+q kill
 
 # Start program launcher
-#bindsym $mod+d exec --no-startup-id xfce4-popup-whiskermenu
-#bindsym $mod+d exec --no-startup-id xfce4-appfinder
 bindsym $mod+d exec --no-startup-id rofi -show drun -font "Ubuntu Bold 10.5" -columns 3 
 bindsym $mod+space exec --no-startup-id rofi -show drun -font "Ubuntu Bold 10.5" -columns 3 
-
-# Launch categorized menu
-#bindsym $mod+z exec --no-startup-id morc_menu
-
-################################################################################################
-## sound-section - DO NOT EDIT if you wish to automatically upgrade Alsa -> Pulseaudio later! ##
-################################################################################################
-
-#exec --no-startup-id volumeicon
-#bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
-#exec --no-startup-id pulseaudio
-#exec --no-startup-id pa-applet
-#bindsym $mod+Ctrl+m exec pavucontrol
-
-################################################################################################
-
-# Screen brightness controls
-# bindsym XF86MonBrightnessUp exec "xbacklight -inc 10; notify-send 'brightness up'"
-# bindsym XF86MonBrightnessDown exec "xbacklight -dec 10; notify-send 'brightness down'"
-
-# Start Applications
-#bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
-#bindsym $mod+F2 exec firefox
-#bindsym $mod+F3 exec pcmanfm
-#bindsym $mod+Shift+F3 exec gksu pcmanfm
-#bindsym $mod+F5 exec terminal -e 'mocp'
-#bindsym $mod+t exec --no-startup-id pkill compton
-#bindsym $mod+Ctrl+t exec --no-startup-id compton -b
-#bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
-#bindsym Print exec --no-startup-id i3-scrot
-#bindsym $mod+Print --release exec --no-startup-id i3-scrot -w
-#bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -s
-#bindsym $mod+Shift+h exec xdg-open /usr/share/doc/manjaro/i3_help.pdf
-#bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
-
-# focus_follows_mouse no
 
 # change focus
 bindsym $mod+h focus left
@@ -107,10 +52,8 @@ bindsym $mod+Shift+Right move right
 
 # Workspace back and forth (with/without active container)
 workspace_auto_back_and_forth no
-# workspace_auto_back_and_forth yes
 
 bindsym $mod+b workspace back_and_forth
-# bindsym $mod+Tab workspace back_and_forth
 bindsym $mod+Shift+b move container to workspace back_and_forth; workspace back_and_forth
 
 # Split orientation
@@ -129,8 +72,6 @@ bindsym $mod+e layout toggle split
 # Toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
 bindsym Menu floating toggle
-# Change focus between tiling / floating windows
-# bindsym $mod+space focus mode_toggle
 
 # Toggle sticky
 bindsym $mod+Shift+s sticky toggle
@@ -151,9 +92,6 @@ bindsym $mod+Ctrl+Left workspace prev
 
 bindsym $mod+Tab workspace next
 bindsym $mod+Shift+Tab workspace prev
-
-bindsym XF86Forward workspace next
-bindsym XF86Back workspace prev
 
 bindsym $mod+apostrophe workspace back_and_forth
 bindsym $mod+grave workspace back_and_forth
@@ -206,9 +144,6 @@ bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
 
 # Open applications on specific workspaces
 # assign [class="Thunderbird"] $ws1
-# assign [class="Pale moon"] $ws2
-# assign [class="Pcmanfm"] $ws3
-# assign [class="Skype"] $ws5
 
 # Open specific applications in floating mode
 for_window [title="alsamixer"] floating enable border pixel 1
@@ -242,9 +177,7 @@ for_window [class="Chrome"] move container to workspace $ws1
 for_window [class="Code"] move container to workspace $ws2
 for_window [instance="crx"] move container to workspace $ws3
 
-
 for_window [class=".*"] title_format " %title"
-
 
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
@@ -258,17 +191,13 @@ bindsym $mod+Shift+r restart
 # Exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
-
-
 # Set shut down, restart and locking features
 bindsym $mod+0 mode "$mode_system"
 set $mode_system (m)enu, (l)ock, (Shift+l)ock view, (e)xit, (s)uspend, (h)ibernate, (r)eboot, (Shift+h)alt
 mode "$mode_system" {
-#     bindsym l exec --no-startup-id  xflock4, mode "default"
     bindsym l exec --no-startup-id lock -p, mode "default"
     bindsym Shift+l exec --no-startup-id xtrlock, mode "default"    
     bindsym s exec --no-startup-id  xfce4-session-logout --suspend, mode "default"
-  #  bindsym u exec --no-startup-id i3exit switch_user, mode "default"
     bindsym e exec --no-startup-id  xfce4-session-logout --logout, mode "default"
     bindsym h exec --no-startup-id  xfce4-session-logout --hibernate, mode "default"
     bindsym r exec --no-startup-id  xfce4-session-logout --reboot, mode "default"
@@ -309,18 +238,9 @@ bindsym $mod+Delete exit
 
 bindsym $mod+Shift+Delete exec --no-startup-id shutdown -h now
 
-
-
-
-
 # Autostart applications
 exec --no-startup-id /usr/lib/polkit-gnome/polLockkit-gnome-authentication-agent-1
 exec --no-startup-id nitrogen --restore;
-#exec --no-startup-id nm-applet
-#exec --no-startup-id xfce4-power-manager
-#exec --no-startup-id pamac-tray
-#exec --no-startup-id clipit
-#exec --no-startup-id start_conky_maia
 exec --no-startup-id xautolock -time 10 -locker xflock4
 exec_always --no-startup-id fix_xcursor
 
@@ -335,7 +255,7 @@ bar {
   #mode invisible
   hidden_state hide
 
-# Please set your primary output first. Example: 'xrandr --output eDP1 --primary'
+  # Please set your primary output first. Example: 'xrandr --output eDP1 --primary'
 
   bindsym button4 nop
   bindsym button5 nop
@@ -359,7 +279,6 @@ bar {
 bindsym $mod+m bar mode toggle
 bindsym $mod+i bar mode invisible
 
-
 # Theme colors
 # class                 border  bground text    indicator child_border
 client.focused          §BASE01 §BASE01 §BASE06 §BASE06   §BASE01
@@ -369,27 +288,6 @@ client.urgent           §BASE00 §BASE08 §BASE07 §BASE08   §BASE08
 client.placeholder      §BASE00 §BASE00 §BASE07 §BASE00   §BASE00
 client.background       §BASE07
 
-
-
-#############################
-### settings for i3-gaps: ###
-#############################
-
-# Set inner/outer gaps
-# gaps inner 10
-# gaps outer 
-
-# Additionally, you can issue commands with the following syntax. This is useful to bind keys to changing the gap size.
-# gaps inner|outer current|all set|plus|minus <px>
-# gaps inner all set 10
-# gaps outer all plus 5
-
-# Smart gaps (gaps used if only more than one container on the workspace)
-# smart_gaps on
-
-# Smart borders (draw borders around container only if it is not the only container on this workspace)
-# on|no_gaps (on=always activate and no_gaps=only activate if the gap size to the edge of the screen is 0)
-# smart_borders on
 
 # Press $mod+Shift+g to enter the gap mode. Choose o or i for modifying outer/inner gaps. Press one of + / - (in-/decrement for current workspace) or 0 (remove gaps for current workspace). If you also press Shift with these keys, the change will be global for all workspaces.
 set $mode_gaps Gaps: (o) outer, (i) inner
@@ -428,38 +326,18 @@ mode "$mode_gaps_outer" {
         bindsym Escape mode "default"
 }
 
-
-
-
 #redshift
 bindsym $mod+Prior exec redshift
 bindsym $mod+Next exec kill `pidof redshift`
 
-
 #zoom
 bindsym $mod+Menu exec kmag
 
-
-
 #exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-
-
 
 bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -D pulse sset Master 5%+
 bindsym XF86AudioLowerVolume exec --no-startup-id amixer -D pulse sset Master 5%-
 bindsym XF86AudioMute exec --no-startup-id amixer -D pulse sset Master toggle
 
 bindsym XF86Launch1 exec  notify-send "Self Destruction protocol initiated"
-
-# bindsym Menu exec xfce4-terminal --drop-down
-
-#exec_always compton 
-
-# bindsym ISO_Level3_Shift exec "xdotool keyup ISO_Level3_Shift; xdotool keyup Escape; "
-# bindsym --release ISO_Level3_Shift exec --no-startup-id "xdotool keyup ISO_Level3_Shift; xdotool key --clearmodifiers Escape"
-
-# bindsym ISO_Level3_Shift exec "xdotool keyup ISO_Level3_Shift; xdotool type i; "
-
-# bindsym h exec "xdotool keyup h; xdotool key"
-
 

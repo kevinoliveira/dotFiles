@@ -23,8 +23,8 @@ bindsym $mod+Return exec xfce4-terminal
 bindsym $mod+Shift+q kill
 
 # Start program launcher
-bindsym $mod+d exec --no-startup-id rofi -show drun -font "Ubuntu Bold 10.5" -columns 3 
-bindsym $mod+space exec --no-startup-id rofi -show drun -font "Ubuntu Bold 10.5" -columns 3 
+bindsym $mod+d exec --no-startup-id rofi -show drun -font "Ubuntu Bold 10.5"  -show-icons
+bindsym $mod+space exec --no-startup-id rofi -show drun -font "Ubuntu Bold 10.5" -show-icons
 
 # change focus
 bindsym $mod+h focus left

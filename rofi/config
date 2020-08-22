@@ -1,1 +1,3 @@
 rofi.theme: /home/year2k38/.config/rofi/theme.rasi
+show-icons: true
+icon-theme: "Humanity"

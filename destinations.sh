@@ -6,4 +6,5 @@ dests=(
     [i3wm/i3status.conf]="../.config/i3/i3status.conf"
     [rofi/config]="../.config/rofi/config"
     [rofi/theme.rasi]="../.config/rofi/theme.rasi"
+    [neovim/init.vim]="../.config/nvim/init.vim"
 )

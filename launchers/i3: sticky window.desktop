@@ -1,0 +1,12 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Version=1.0
+Type=Application
+Terminal=false
+Icon[en_US]=gnome-panel-launcher
+Name[en_US]=i3: sticky window
+Exec=i3-msg [con_id="__focused__"] sticky toggle
+Comment[en_US]=make current window follow you on all workspaces, only works on floating windows
+Name=i3: sticky window
+Comment=make current window follow you on all workspaces, only works on floating windows
+Icon=gnome-panel-launcher

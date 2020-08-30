@@ -1,0 +1,12 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Version=1.0
+Type=Application
+Terminal=false
+Icon[en_US]=gnome-panel-launcher
+Name[en_US]=redshift: enable
+Exec=redshift
+Comment[en_US]=enable night light
+Name=redshift: enable
+Comment=enable night light
+Icon=gnome-panel-launcher

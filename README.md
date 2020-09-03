@@ -1,5 +1,12 @@
 ![Image of Yaktocat](https://dotfiles.github.io/images/dotfiles-logo.png)
 
+# dependencies
+- i3wm
+- neovim
+- ttf-ubuntu-font-family
+- ttf-font-awesome
+
+
 todo:
 - [x] suport string replacement 
 - [x] suport file concat

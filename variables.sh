@@ -3,20 +3,20 @@
 declare -A vars
 vars=(
     [§USER]="kevin"
-    [§BASE00]="#111111" # Black
-    [§BASE01]="#333333"
-    [§BASE02]="#555555"
-    [§BASE03]="#777777"
-    [§BASE04]="#999999"
-    [§BASE05]="#bbbbbb"
+    [§BASE00]="#040511" # Black
+    [§BASE01]="#080A21"
+    [§BASE02]="#0C0F31"
+    [§BASE03]="#101442"
+    [§BASE04]="#141952"
+    [§BASE05]="#181E63"
     [§BASE06]="#dddddd"
     [§BASE07]="#ffffff" # White
-    [§BASE08]="#ff4136" # Red
-    [§BASE09]="#ff851b" # Orange
-    [§BASE0A]="#ffdc00" # Yellow
-    [§BASE0B]="#2ecc40" # Green
-    [§BASE0C]="#7fdbff" # Aqua
+    [§BASE08]="#FE5D6D" # Red
+    [§BASE09]="#FF7E78" # Orange
+    [§BASE0A]="#FFDC8A" # Yellow
+    [§BASE0B]="#23FF93" # Green
+    [§BASE0C]="#27EDEE" # Aqua
     [§BASE0D]="#0074d9" # Blue
-    [§BASE0E]="#b10dc9" # Purple
+    [§BASE0E]="#FD00F9" # Purple
     [§BASE0F]="#85144b" # Maroon
 )

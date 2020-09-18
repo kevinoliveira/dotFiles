@@ -28,13 +28,13 @@ MiscNewTabAdjacent=FALSE
 ScrollingBar=TERMINAL_SCROLLBAR_NONE
 BackgroundDarkness=0,900000
 FontName=Source Code Pro 11
-ColorForeground=#d6d6d6
-ColorPalette=rgb(17,17,17);rgb(255,65,54);rgb(46,204,64);rgb(255,220,0);rgb(127,219,255);rgb(177,13,201);rgb(255,133,27);rgb(214,214,214);rgb(85,85,85);rgb(255,65,54);rgb(46,204,64);rgb(255,220,0);rgb(127,219,255);rgb(177,13,201);rgb(255,133,27);rgb(255,255,255)
+ColorForeground=§BASE06
+ColorPalette=§BASE00;§BASE08;§BASE0B;§BASE0A;§BASE0C;§BASE0E;§BASE09;§BASE07;§BASE05;§BASE08;§BASE0B;§BASE0A;§BASE0C;§BASE0E;§BASE09;§BASE07
 ColorCursor=x
 ColorBoldIsBright=FALSE
 DropdownWidth=95
 DropdownAlwaysShowTabs=FALSE
 DropdownHeight=60
 TitleInitial=#!
-ColorBackground=#111111111111
+ColorBackground=§BASE00
 

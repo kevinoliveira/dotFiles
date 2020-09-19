@@ -5,7 +5,7 @@
 - neovim
 - ttf-ubuntu-font-family
 - ttf-font-awesome
-
+- xorg-xinput
 
 ```
 > tree -I *.md                     

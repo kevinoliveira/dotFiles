@@ -1,0 +1,3 @@
+# touchpap tap to click
+# https://cravencode.com/post/essentials/enable-tap-to-click-in-i3wm/
+exec_always --no-startup-id xinput set-prop 14 339 1

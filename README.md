@@ -7,38 +7,37 @@
 - ttf-font-awesome
 
 
-todo:
-- [x] suport string replacement 
-- [x] suport file concat
-- [ ] suport file auto copy
-
-configuration files for:
-- i3wm
-    - i3
-    - i3status
-- rofi
-    - custom theme
-    - config
-- desktop launchers
-    - wifi menu
-    - shutdown 
-    - launcher creator
-- more to come
-
-
 ```
 > tree -I *.md                     
 .
+├── build.sh
+├── destinations.sh
 ├── i3wm
-│   ├── config
-│   └── i3status.conf
-├── lauchers
-│   ├── createNew.desktop
-│   ├── shutdown.desktop
-│   └── wifiMenu.desktop
-└── rofi
-    ├── config
-    └── glue_pro_orange.rasi
+│   ├── config
+│   ├── i3status.conf
+│   ├── thinkpad@config
+│   └── thinkpad@i3status.conf
+├── launchers
+│   ├── Create Launcher.desktop
+│   ├── i3: enable border.desktop
+│   ├── i3: remove border.desktop
+│   ├── i3: sticky window.desktop
+│   ├── i3: toggle bar.desktop
+│   ├── redshift: disable .desktop
+│   └── redshift: enable.desktop
+├── neovim
+│   └── init.vim
+├── rofi
+│   ├── config
+│   └── theme.rasi
+├── scripts
+│   ├── i3-shortcuts.sh
+│   └── rofigen.sh
+├── variables.sh
+├── wallpaper
+│   └── 80city.jpg
+└── xfce4-terminal
+    └── terminalrc
 
-3 directories, 7 files
+8 directories, 21 files
 ```

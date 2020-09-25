@@ -1,15 +1,16 @@
 set $mod Mod4
 
-new_window pixel 1
+new_window normal 4
+# new_window border normal
 new_float normal
 
 # Hide borders
-hide_edge_borders none
+# hide_edge_borders none
 
 # Change borders
 bindsym $mod+u border none
-bindsym $mod+y border pixel 1
-bindsym $mod+n border normal
+bindsym $mod+y border pixel 4
+bindsym $mod+n border normal 4
 
 font pango: Ubuntu Bold 10
 
@@ -281,11 +282,11 @@ bindsym $mod+i bar mode invisible
 
 # Theme colors
 # class                 border  bground text    indicator child_border
-client.focused          §BASE01 §BASE01 §BASE06 §BASE06   §BASE01
-client.focused_inactive §BASE06 §BASE06 §BASE06 §BASE02   §BASE06
-client.unfocused        §BASE06 §BASE06 §BASE06 §BASE00   §BASE06
-client.urgent           §BASE00 §BASE08 §BASE07 §BASE08   §BASE08
-client.placeholder      §BASE00 §BASE00 §BASE07 §BASE00   §BASE00
+client.focused          §BASE0A §BASE0A §BASE00 §BASE0A   §BASE0A
+client.focused_inactive §BASE01 §BASE01 §BASE07 §BASE01   §BASE01
+client.unfocused        §BASE01 §BASE01 §BASE07 §BASE01   §BASE01
+client.urgent           §BASE08 §BASE08 §BASE07 §BASE08   §BASE08
+client.placeholder      §BASE01 §BASE01 §BASE07 §BASE01   §BASE01
 client.background       §BASE07
 
 
